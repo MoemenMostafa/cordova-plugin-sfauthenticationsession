@@ -1,0 +1,11 @@
+{
+  "name": "cordova-plugin-sfauthenticationsession",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-plugin-sfauthenticationsession",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "description": "Cordova Plugin for iOS 11 SFAuthenticationSession API"
+}

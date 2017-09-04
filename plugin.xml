@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-sfauthenticationsession"
+    version="1.0.0">
+    <name>SFAuthenticationSession</name>
+    <description>Cordova Plugin for iOS 11 SFAuthenticationSession API</description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
+    <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="SFAuthenticationSession" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="SFAuthenticationSession">
+                <param name="ios-package" value="SFAuthenticationSession" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/SFAuthenticationSession.h" />
+        <source-file src="src/ios/SFAuthenticationSession.m" />
+    </platform>
+</plugin>
