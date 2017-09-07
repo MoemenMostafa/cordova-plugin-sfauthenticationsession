@@ -16,9 +16,7 @@ SFAuthenticationSession *_authenticationVC;
     }
 }
 
-- (void)echo:(CDVInvokedUrlCommand *)command {
-//  NSString* phrase = [command.arguments objectAtIndex:0];
-
+- (void)start:(CDVInvokedUrlCommand *)command {
 
     if (@available(iOS 11.0, *)) {
         NSString* redirectScheme = [command.arguments objectAtIndex:0];
@@ -29,30 +27,22 @@ SFAuthenticationSession *_authenticationVC;
                                    completionHandler:^(NSURL * _Nullable callbackURL,
                                                        NSError * _Nullable error) {
                                        _authenticationVC = nil;
+                                       CDVPluginResult *result;
                                        if (callbackURL) {
                                            NSLog(@"success");
                                            NSLog(@"%@", callbackURL);
+                                           result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: callbackURL.absoluteString];
+
                                        } else {
                                            NSLog(@"error");
                                            NSLog(@"%@", error);
+                                           result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"error"];
                                        }
+                                       [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
                                    }];
         _authenticationVC = authenticationVC;
         [authenticationVC start];
     }
-}
-
-- (void)getDate:(CDVInvokedUrlCommand *)command {
-  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-  NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
-  [dateFormatter setLocale:enUSPOSIXLocale];
-  [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
-
-  NSDate *now = [NSDate date];
-  NSString *iso8601String = [dateFormatter stringFromDate:now];
-
-  CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:iso8601String];
-  [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
 @end
