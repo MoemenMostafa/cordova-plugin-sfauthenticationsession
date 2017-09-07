@@ -12,13 +12,9 @@
 
     <!-- ios -->
     <platform name="ios">
-        <js-module src="www/plugin.js" name="plugin">
-            <runs/>
-            <clobbers target="SFAuthenticationSession" />
-        </js-module>
         <config-file target="config.xml" parent="/*">
             <feature name="SFAuthenticationSession">
-                <param name="ios-package" value="SFAuthenticationSession" onload="true" />
+                <param name="ios-package" value="SFAuthenticationSession" />
             </feature>
         </config-file>
 
