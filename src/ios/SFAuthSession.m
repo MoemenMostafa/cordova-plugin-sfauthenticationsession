@@ -4,16 +4,12 @@
 
 #import <Cordova/CDVAvailability.h>
 
-BOOL openedSafari = NO;
 SFAuthenticationSession *_authenticationVC;
 
 
 @implementation SFAuthSession;
 
 - (void)pluginInitialize {
-    if (@available(iOS 11.0, *)) {
-
-    }
 }
 
 - (void)start:(CDVInvokedUrlCommand *)command {
@@ -29,13 +25,9 @@ SFAuthenticationSession *_authenticationVC;
                                        _authenticationVC = nil;
                                        CDVPluginResult *result;
                                        if (callbackURL) {
-                                           NSLog(@"success");
-                                           NSLog(@"%@", callbackURL);
                                            result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: callbackURL.absoluteString];
 
                                        } else {
-                                           NSLog(@"error");
-                                           NSLog(@"%@", error);
                                            result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"error"];
                                        }
                                        [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
