@@ -1,9 +1,9 @@
 
 var exec = require('cordova/exec');
 
-var PLUGIN_NAME = 'SFAuthenticationSession';
+var PLUGIN_NAME = 'SFAuthSession';
 
-var SFAuthenticationSession = {
+var SFAuthSession = {
   echo: function(phrase, cb) {
     exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
   },
@@ -12,4 +12,4 @@ var SFAuthenticationSession = {
   }
 };
 
-module.exports = SFAuthenticationSession;
+module.exports = SFAuthSession;

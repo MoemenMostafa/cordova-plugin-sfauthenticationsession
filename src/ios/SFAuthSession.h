@@ -1,6 +1,6 @@
 #import <Cordova/CDVPlugin.h>
 
-@interface SFAuthenticationSession : CDVPlugin {
+@interface SFAuthSession : CDVPlugin {
 }
 
 // The hooks for our plugin commands
