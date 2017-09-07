@@ -10,6 +10,10 @@ To install the plugin with the Cordova CLI from npm:
 $ cordova plugin add cordova-plugin-sfauthenticationsession
 ```
 ## 3. Usage
+```js
+SFAuthSession.start(String([custom-scheme]),String([oAuth-URL]),[CallBack-Function])
+```
+#### example
 
 ```js
 SFAuthSession.start("customScheme://","https://your-oauth-url",function(data){alert(data)})
