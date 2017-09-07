@@ -4,11 +4,8 @@ var exec = require('cordova/exec');
 var PLUGIN_NAME = 'SFAuthSession';
 
 var SFAuthSession = {
-  echo: function(phrase, cb) {
-    exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
-  },
-  getDate: function(cb) {
-    exec(cb, null, PLUGIN_NAME, 'getDate', []);
+  start: function(redirectScheme, requestURL, cb) {
+    exec(cb, null, PLUGIN_NAME, 'start', [redirectScheme, requestURL]);
   }
 };
 
