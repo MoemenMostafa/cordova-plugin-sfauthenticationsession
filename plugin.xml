@@ -2,11 +2,11 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-plugin-sfauthenticationsession"
-        version="1.0.2">
+        version="1.0.3">
     <name>SFAuthenticationSession</name>
     <description>Cordova Plugin for iOS 11 SFAuthenticationSession API</description>
     <license>MIT</license>
-    <keywords>SFAuthenticationSession,iOS 11,iOS,oAuth</keywords>
+    <keywords>SFAuthenticationSession,iOS 11,iOS,oAuth,Single Sign on,Privacy</keywords>
     <repo>https://github.com/MoemenMostafa/cordova-plugin-sfauthenticationsession.git</repo>
     <issue>https://github.com/MoemenMostafa/cordova-plugin-sfauthenticationsession/issues</issue>
 
