@@ -29,13 +29,13 @@ You should detect first that the user is using iOS 11 and then us this plugin.
 To do so you should use the **cordova device plugin**
 
 ```js
-SFAuthSession.start(String([custom-scheme]),String([oAuth-URL]),[CallBack-Function])
+SFAuthSession.start(String([custom-scheme]),String([oAuth-URL]),[CallBack-Function],[errorCallBack-Function])
 ```
 #### example
 
 ```js
 if (parseInt(device.version) >= 11 && device.platform == "iOS"){
-    SFAuthSession.start("customScheme://","https://your-oauth-url",function(data){alert(data)})
+    SFAuthSession.start("customScheme://","https://your-oauth-url",function(data){alert(data)},function(error){alert(error)})
 }
 ```
 
