@@ -4,7 +4,12 @@ By Moamen Mostafa  - [@Moamen Mostafa](linkedin.com/in/moamen-mostafa-4b385713/)
 ## 1. Description
 Cordova Plugin for iOS 11 SFAuthenticationSession API.
 
-## 2. Background
+
+## 2. Prerequisites 
+ 
+iOS SDK version 11+ (Important). The build will fail on SDK version 10 and below.
+ 
+## 3. Background
 Starting from iOS 11 Apple has stopped the session and cookies sharing between SFSafariViewController and Safari 
 Browser and they introduced a new API called SFAuthenticationSession to manage authentications instead.
 
@@ -18,13 +23,13 @@ Now this vulnerability is mitigated by the new API, SFAuthenticationSession, by 
 of the custom scheme. 
 
 
-## 3. Installation
+## 4. Installation
 To install the plugin with the Cordova CLI from npm:
 
 ```
 $ cordova plugin add cordova-plugin-sfauthenticationsession
 ```
-## 4. Usage
+## 5. Usage
 You should detect first that the user is using iOS 11 and then us this plugin.
 To do so you should use the **cordova device plugin**
 
@@ -39,6 +44,6 @@ if (parseInt(device.version) >= 11 && device.platform == "iOS"){
 }
 ```
 
-## 5. References
+## 6. References
 * [Apple Developer - SFAuthenticationSession](https://developer.apple.com/documentation/safariservices/sfauthenticationsession)
 * [iOS 11, Privacy and Single Sign On](https://medium.com/the-traveled-ios-developers-guide/ios-11-privacy-and-single-sign-on-6291687a2ccc)

@@ -1,8 +1,6 @@
 #import <Availability.h>
 #import "SFAuthSession.h"
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 110000
-
 #import <SafariServices/SFAuthenticationSession.h>
 
 #import <Cordova/CDVAvailability.h>
@@ -41,4 +39,3 @@ SFAuthenticationSession *_authenticationVC;
 }
 
 @end
-#endif
