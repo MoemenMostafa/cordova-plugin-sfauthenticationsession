@@ -47,3 +47,6 @@ if (parseInt(device.version) >= 11 && device.platform == "iOS"){
 ## 6. References
 * [Apple Developer - SFAuthenticationSession](https://developer.apple.com/documentation/safariservices/sfauthenticationsession)
 * [iOS 11, Privacy and Single Sign On](https://medium.com/the-traveled-ios-developers-guide/ios-11-privacy-and-single-sign-on-6291687a2ccc)
+
+## 7. License
+MIT
